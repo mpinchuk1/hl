@@ -1,0 +1,8 @@
+{
+    "workers": [
+        { "id": 1, "name": "Tom", "surname": "Bom" }
+    ],
+    "departments": [
+        { "id": 1, "name": "Office", "bossId": 1 }
+    ]
+}
