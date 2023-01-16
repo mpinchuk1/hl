@@ -1,0 +1,403 @@
+m.pinchuk@uaiev8545nbl:~/Documents/new/hl/spark/script$ docker compose up 
+[+] Running 1/0
+ ⠿ Container script-spark-sumbit-1  Created                                                                                                                                                           0.0s
+Attaching to script-spark-sumbit-1
+script-spark-sumbit-1  | :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+script-spark-sumbit-1  | Ivy Default Cache set to: /root/.ivy2/cache
+script-spark-sumbit-1  | The jars for the packages stored in: /root/.ivy2/jars
+script-spark-sumbit-1  | org.mongodb.spark#mongo-spark-connector added as a dependency
+script-spark-sumbit-1  | :: resolving dependencies :: org.apache.spark#spark-submit-parent-e9f7f2d7-843e-4b31-a8d9-342d9d560db1;1.0
+script-spark-sumbit-1  | 	confs: [default]
+script-spark-sumbit-1  | 	found org.mongodb.spark#mongo-spark-connector;10.0.5 in central
+script-spark-sumbit-1  | 	found org.mongodb#mongodb-driver-sync;4.5.1 in central
+script-spark-sumbit-1  | 	[4.5.1] org.mongodb#mongodb-driver-sync;[4.5.0,4.5.99)
+script-spark-sumbit-1  | 	found org.mongodb#bson;4.5.1 in central
+script-spark-sumbit-1  | 	found org.mongodb#mongodb-driver-core;4.5.1 in central
+script-spark-sumbit-1  | :: resolution report :: resolve 1006ms :: artifacts dl 6ms
+script-spark-sumbit-1  | 	:: modules in use:
+script-spark-sumbit-1  | 	org.mongodb#bson;4.5.1 from central in [default]
+script-spark-sumbit-1  | 	org.mongodb#mongodb-driver-core;4.5.1 from central in [default]
+script-spark-sumbit-1  | 	org.mongodb#mongodb-driver-sync;4.5.1 from central in [default]
+script-spark-sumbit-1  | 	org.mongodb.spark#mongo-spark-connector;10.0.5 from central in [default]
+script-spark-sumbit-1  | 	---------------------------------------------------------------------
+script-spark-sumbit-1  | 	|                  |            modules            ||   artifacts   |
+script-spark-sumbit-1  | 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+script-spark-sumbit-1  | 	---------------------------------------------------------------------
+script-spark-sumbit-1  | 	|      default     |   4   |   1   |   0   |   0   ||   4   |   0   |
+script-spark-sumbit-1  | 	---------------------------------------------------------------------
+script-spark-sumbit-1  | :: retrieving :: org.apache.spark#spark-submit-parent-e9f7f2d7-843e-4b31-a8d9-342d9d560db1
+script-spark-sumbit-1  | 	confs: [default]
+script-spark-sumbit-1  | 	0 artifacts copied, 4 already retrieved (0kB/5ms)
+script-spark-sumbit-1  | 23/01/16 19:30:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SparkContext: Running Spark version 3.3.0
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO ResourceUtils: ==============================================================
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO ResourceUtils: No custom resources configured for spark.driver.
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO ResourceUtils: ==============================================================
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SparkContext: Submitted application: highload-lab5
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO ResourceProfile: Limiting resource is cpu
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO ResourceProfileManager: Added ResourceProfile id: 0
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SecurityManager: Changing view acls to: root
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SecurityManager: Changing modify acls to: root
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SecurityManager: Changing view acls groups to: 
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SecurityManager: Changing modify acls groups to: 
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO Utils: Successfully started service 'sparkDriver' on port 7001.
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SparkEnv: Registering MapOutputTracker
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SparkEnv: Registering BlockManagerMaster
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-acef5391-db99-45de-99de-aba897f417ee
+script-spark-sumbit-1  | 23/01/16 19:30:47 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO SparkEnv: Registering OutputCommitCoordinator
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.mongodb.spark_mongo-spark-connector-10.0.5.jar at spark://spark-sumbit:7001/jars/org.mongodb.spark_mongo-spark-connector-10.0.5.jar with timestamp 1673897447486
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.mongodb_mongodb-driver-sync-4.5.1.jar at spark://spark-sumbit:7001/jars/org.mongodb_mongodb-driver-sync-4.5.1.jar with timestamp 1673897447486
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.mongodb_bson-4.5.1.jar at spark://spark-sumbit:7001/jars/org.mongodb_bson-4.5.1.jar with timestamp 1673897447486
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.mongodb_mongodb-driver-core-4.5.1.jar at spark://spark-sumbit:7001/jars/org.mongodb_mongodb-driver-core-4.5.1.jar with timestamp 1673897447486
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO SparkContext: Added file file:///root/.ivy2/jars/org.mongodb.spark_mongo-spark-connector-10.0.5.jar at spark://spark-sumbit:7001/files/org.mongodb.spark_mongo-spark-connector-10.0.5.jar with timestamp 1673897447486
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO Utils: Copying /root/.ivy2/jars/org.mongodb.spark_mongo-spark-connector-10.0.5.jar to /tmp/spark-571f8a90-f6ee-4d4e-975f-d15ac0c58343/userFiles-ccb604cc-a9c5-487f-a4f8-1b10916c61d2/org.mongodb.spark_mongo-spark-connector-10.0.5.jar
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO SparkContext: Added file file:///root/.ivy2/jars/org.mongodb_mongodb-driver-sync-4.5.1.jar at spark://spark-sumbit:7001/files/org.mongodb_mongodb-driver-sync-4.5.1.jar with timestamp 1673897447486
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO Utils: Copying /root/.ivy2/jars/org.mongodb_mongodb-driver-sync-4.5.1.jar to /tmp/spark-571f8a90-f6ee-4d4e-975f-d15ac0c58343/userFiles-ccb604cc-a9c5-487f-a4f8-1b10916c61d2/org.mongodb_mongodb-driver-sync-4.5.1.jar
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO SparkContext: Added file file:///root/.ivy2/jars/org.mongodb_bson-4.5.1.jar at spark://spark-sumbit:7001/files/org.mongodb_bson-4.5.1.jar with timestamp 1673897447486
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO Utils: Copying /root/.ivy2/jars/org.mongodb_bson-4.5.1.jar to /tmp/spark-571f8a90-f6ee-4d4e-975f-d15ac0c58343/userFiles-ccb604cc-a9c5-487f-a4f8-1b10916c61d2/org.mongodb_bson-4.5.1.jar
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO SparkContext: Added file file:///root/.ivy2/jars/org.mongodb_mongodb-driver-core-4.5.1.jar at spark://spark-sumbit:7001/files/org.mongodb_mongodb-driver-core-4.5.1.jar with timestamp 1673897447486
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO Utils: Copying /root/.ivy2/jars/org.mongodb_mongodb-driver-core-4.5.1.jar to /tmp/spark-571f8a90-f6ee-4d4e-975f-d15ac0c58343/userFiles-ccb604cc-a9c5-487f-a4f8-1b10916c61d2/org.mongodb_mongodb-driver-core-4.5.1.jar
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO TransportClientFactory: Successfully created connection to spark-master/172.25.0.2:7077 after 30 ms (0 ms spent in bootstraps)
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20230116193048-0002
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20230116193048-0002/0 on worker-20230116192336-172.25.0.3-7000 (172.25.0.3:7000) with 4 core(s)
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO StandaloneSchedulerBackend: Granted executor ID app-20230116193048-0002/0 on hostPort 172.25.0.3:7000 with 4 core(s), 1024.0 MiB RAM
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7002.
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO NettyBlockTransferService: Server created on spark-sumbit:7002
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, spark-sumbit, 7002, None)
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO BlockManagerMasterEndpoint: Registering block manager spark-sumbit:7002 with 434.4 MiB RAM, BlockManagerId(driver, spark-sumbit, 7002, None)
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, spark-sumbit, 7002, None)
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, spark-sumbit, 7002, None)
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20230116193048-0002/0 is now RUNNING
+script-spark-sumbit-1  | 23/01/16 19:30:48 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+script-spark-sumbit-1  | 23/01/16 19:30:49 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+script-spark-sumbit-1  | 23/01/16 19:30:49 INFO SharedState: Warehouse path is 'file:/opt/spark/spark-warehouse'.
+script-spark-sumbit-1  | 23/01/16 19:30:50 INFO cluster: Cluster created with settings {hosts=[router01:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+script-spark-sumbit-1  | 23/01/16 19:30:50 INFO cluster: Cluster description not yet available. Waiting for 30000 ms before timing out
+script-spark-sumbit-1  | 23/01/16 19:30:50 INFO connection: Opened connection [connectionId{localValue:2, serverValue:126}] to router01:27017
+script-spark-sumbit-1  | 23/01/16 19:30:50 INFO connection: Opened connection [connectionId{localValue:1, serverValue:127}] to router01:27017
+script-spark-sumbit-1  | 23/01/16 19:30:50 INFO cluster: Monitor thread successfully connected to server with description ServerDescription{address=router01:27017, type=SHARD_ROUTER, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=45133005}
+script-spark-sumbit-1  | 23/01/16 19:30:50 INFO connection: Opened connection [connectionId{localValue:3, serverValue:128}] to router01:27017
+script-spark-sumbit-1  | 23/01/16 19:30:50 INFO MongoTable: Creating MongoTable: mongo-spark-10.0.5
+script-spark-sumbit-1  | 23/01/16 19:30:51 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.25.0.3:40084) with ID 0,  ResourceProfileId 0
+script-spark-sumbit-1  | 23/01/16 19:30:52 INFO BlockManagerMasterEndpoint: Registering block manager 172.25.0.3:34035 with 434.4 MiB RAM, BlockManagerId(0, 172.25.0.3, 34035, None)
+script-spark-sumbit-1  | 23/01/16 19:30:53 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Output: driver_id#4
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:30:53 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:53 INFO Partitioner: Fewer documents (1675) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:53 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:53 INFO Partitioner: Fewer documents (1629) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO CodeGenerator: Code generated in 207.65968 ms
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO SparkContext: Starting job: first at /apps/script.py:30
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO DAGScheduler: Got job 0 (first at /apps/script.py:30) with 1 output partitions
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO DAGScheduler: Final stage: ResultStage 0 (first at /apps/script.py:30)
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO DAGScheduler: Parents of final stage: List()
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO DAGScheduler: Missing parents: List()
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at first at /apps/script.py:30), which has no missing parents
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 39.7 KiB, free 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 16.3 KiB, free 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on spark-sumbit:7002 (size: 16.3 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1513
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at first at /apps/script.py:30) (first 15 tasks are for partitions Vector(0))
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+script-spark-sumbit-1  | 23/01/16 19:30:54 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (172.25.0.3, executor 0, partition 0, PROCESS_LOCAL, 5015 bytes) taskResourceAssignments Map()
+script-spark-sumbit-1  | 23/01/16 19:30:55 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.25.0.3:34035 (size: 16.3 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 3002 ms on 172.25.0.3 (executor 0) (1/1)
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: ResultStage 0 (first at /apps/script.py:30) finished in 3.153 s
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: Job 0 finished: first at /apps/script.py:30, took 3.190275 s
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Output: client_id#1
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO Partitioner: Fewer documents (1675) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO Partitioner: Fewer documents (1629) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO SparkContext: Starting job: first at /apps/script.py:31
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: Got job 1 (first at /apps/script.py:31) with 1 output partitions
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: Final stage: ResultStage 1 (first at /apps/script.py:31)
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: Parents of final stage: List()
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: Missing parents: List()
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[7] at first at /apps/script.py:31), which has no missing parents
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 39.7 KiB, free 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 16.3 KiB, free 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on spark-sumbit:7002 (size: 16.3 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[7] at first at /apps/script.py:31) (first 15 tasks are for partitions Vector(0))
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (172.25.0.3, executor 0, partition 0, PROCESS_LOCAL, 5015 bytes) taskResourceAssignments Map()
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.25.0.3:34035 (size: 16.3 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 126 ms on 172.25.0.3 (executor 0) (1/1)
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: ResultStage 1 (first at /apps/script.py:31) finished in 0.138 s
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+script-spark-sumbit-1  | 23/01/16 19:30:57 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Job 1 finished: first at /apps/script.py:31, took 0.144291 s
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Output: end_date#6, start_date#8
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO Partitioner: Fewer documents (1629) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO Partitioner: Fewer documents (1629) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO CodeGenerator: Code generated in 8.445087 ms
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO SparkContext: Starting job: first at /apps/script.py:32
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Got job 2 (first at /apps/script.py:32) with 1 output partitions
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Final stage: ResultStage 2 (first at /apps/script.py:32)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Parents of final stage: List()
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Missing parents: List()
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[11] at first at /apps/script.py:32), which has no missing parents
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 22.8 KiB, free 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 10.4 KiB, free 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on spark-sumbit:7002 (size: 10.4 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1513
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[11] at first at /apps/script.py:32) (first 15 tasks are for partitions Vector(0))
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (172.25.0.3, executor 0, partition 0, PROCESS_LOCAL, 5015 bytes) taskResourceAssignments Map()
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.25.0.3:34035 (size: 10.4 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 417 ms on 172.25.0.3 (executor 0) (1/1)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: ResultStage 2 (first at /apps/script.py:32) finished in 0.432 s
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Job 2 finished: first at /apps/script.py:32, took 0.436276 s
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Output: driver_review#5
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO Partitioner: Fewer documents (1675) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO Partitioner: Fewer documents (1629) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO CodeGenerator: Code generated in 23.393162 ms
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO SparkContext: Starting job: first at /apps/script.py:33
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Got job 3 (first at /apps/script.py:33) with 1 output partitions
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Final stage: ResultStage 3 (first at /apps/script.py:33)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Parents of final stage: List()
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Missing parents: List()
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[15] at first at /apps/script.py:33), which has no missing parents
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 30.1 KiB, free 434.2 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 12.2 KiB, free 434.2 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on spark-sumbit:7002 (size: 12.2 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1513
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[15] at first at /apps/script.py:33) (first 15 tasks are for partitions Vector(0))
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (172.25.0.3, executor 0, partition 0, PROCESS_LOCAL, 5015 bytes) taskResourceAssignments Map()
+script-spark-sumbit-1  | 23/01/16 19:30:58 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.25.0.3:34035 (size: 12.2 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 456 ms on 172.25.0.3 (executor 0) (1/1)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: ResultStage 3 (first at /apps/script.py:33) finished in 0.467 s
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Job 3 finished: first at /apps/script.py:33, took 0.471158 s
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Output: driver_review#5
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Fewer documents (1675) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Fewer documents (1675) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO CodeGenerator: Code generated in 23.177399 ms
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO SparkContext: Starting job: first at /apps/script.py:34
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Got job 4 (first at /apps/script.py:34) with 1 output partitions
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Final stage: ResultStage 4 (first at /apps/script.py:34)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Parents of final stage: List()
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Missing parents: List()
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[19] at first at /apps/script.py:34), which has no missing parents
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 30.6 KiB, free 434.2 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 12.3 KiB, free 434.2 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on spark-sumbit:7002 (size: 12.3 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1513
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[19] at first at /apps/script.py:34) (first 15 tasks are for partitions Vector(0))
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4) (172.25.0.3, executor 0, partition 0, PROCESS_LOCAL, 5015 bytes) taskResourceAssignments Map()
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 172.25.0.3:34035 (size: 12.3 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 175 ms on 172.25.0.3 (executor 0) (1/1)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: ResultStage 4 (first at /apps/script.py:34) finished in 0.186 s
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Job 4 finished: first at /apps/script.py:34, took 0.188884 s
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Output: driver_review#5
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Fewer documents (1696) than the calculated number of documents per partition (205128.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Fewer documents (1629) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO CodeGenerator: Code generated in 14.543306 ms
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO SparkContext: Starting job: first at /apps/script.py:35
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Got job 5 (first at /apps/script.py:35) with 1 output partitions
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Final stage: ResultStage 5 (first at /apps/script.py:35)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Parents of final stage: List()
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Missing parents: List()
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[23] at first at /apps/script.py:35), which has no missing parents
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 30.1 KiB, free 434.1 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 12.2 KiB, free 434.1 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on spark-sumbit:7002 (size: 12.2 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1513
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[23] at first at /apps/script.py:35) (first 15 tasks are for partitions Vector(0))
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5) (172.25.0.3, executor 0, partition 0, PROCESS_LOCAL, 5015 bytes) taskResourceAssignments Map()
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 172.25.0.3:34035 (size: 12.2 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 5) in 134 ms on 172.25.0.3 (executor 0) (1/1)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: ResultStage 5 (first at /apps/script.py:35) finished in 0.145 s
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 5: Stage finished
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Job 5 finished: first at /apps/script.py:35, took 0.149022 s
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Output: client_review#2
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Fewer documents (1696) than the calculated number of documents per partition (205128.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO Partitioner: Fewer documents (1629) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO CodeGenerator: Code generated in 16.558406 ms
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO SparkContext: Starting job: first at /apps/script.py:36
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Got job 6 (first at /apps/script.py:36) with 1 output partitions
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Final stage: ResultStage 6 (first at /apps/script.py:36)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Parents of final stage: List()
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Missing parents: List()
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[27] at first at /apps/script.py:36), which has no missing parents
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 28.8 KiB, free 434.1 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 12.0 KiB, free 434.1 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on spark-sumbit:7002 (size: 12.0 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1513
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[27] at first at /apps/script.py:36) (first 15 tasks are for partitions Vector(0))
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks resource profile 0
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6) (172.25.0.3, executor 0, partition 0, PROCESS_LOCAL, 5015 bytes) taskResourceAssignments Map()
+script-spark-sumbit-1  | 23/01/16 19:30:59 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 172.25.0.3:34035 (size: 12.0 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 187 ms on 172.25.0.3 (executor 0) (1/1)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: ResultStage 6 (first at /apps/script.py:36) finished in 0.196 s
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSchedulerImpl: Killing all running tasks in stage 6: Stage finished
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Job 6 finished: first at /apps/script.py:36, took 0.199975 s
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Output: client_review#2
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO Partitioner: Fewer documents (1675) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO Partitioner: Fewer documents (1629) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO CodeGenerator: Code generated in 22.986183 ms
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO SparkContext: Starting job: first at /apps/script.py:37
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Got job 7 (first at /apps/script.py:37) with 1 output partitions
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Final stage: ResultStage 7 (first at /apps/script.py:37)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Parents of final stage: List()
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Missing parents: List()
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[31] at first at /apps/script.py:37), which has no missing parents
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 29.2 KiB, free 434.1 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 12.1 KiB, free 434.1 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on spark-sumbit:7002 (size: 12.1 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1513
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[31] at first at /apps/script.py:37) (first 15 tasks are for partitions Vector(0))
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks resource profile 0
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 7) (172.25.0.3, executor 0, partition 0, PROCESS_LOCAL, 5015 bytes) taskResourceAssignments Map()
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 172.25.0.3:34035 (size: 12.1 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 7) in 130 ms on 172.25.0.3 (executor 0) (1/1)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: ResultStage 7 (first at /apps/script.py:37) finished in 0.140 s
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSchedulerImpl: Killing all running tasks in stage 7: Stage finished
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Job 7 finished: first at /apps/script.py:37, took 0.143488 s
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_1_piece0 on spark-sumbit:7002 in memory (size: 16.3 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 172.25.0.3:34035 in memory (size: 16.3 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_3_piece0 on spark-sumbit:7002 in memory (size: 12.2 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 172.25.0.3:34035 in memory (size: 12.2 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_7_piece0 on spark-sumbit:7002 in memory (size: 12.1 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_7_piece0 on 172.25.0.3:34035 in memory (size: 12.1 KiB, free: 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_5_piece0 on spark-sumbit:7002 in memory (size: 12.2 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_5_piece0 on 172.25.0.3:34035 in memory (size: 12.2 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_0_piece0 on spark-sumbit:7002 in memory (size: 16.3 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 172.25.0.3:34035 in memory (size: 16.3 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_2_piece0 on spark-sumbit:7002 in memory (size: 10.4 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 172.25.0.3:34035 in memory (size: 10.4 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_4_piece0 on spark-sumbit:7002 in memory (size: 12.3 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 172.25.0.3:34035 in memory (size: 12.3 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_6_piece0 on spark-sumbit:7002 in memory (size: 12.0 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Removed broadcast_6_piece0 on 172.25.0.3:34035 in memory (size: 12.0 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Pushing operators to MongoTable()
+script-spark-sumbit-1  | Pushed Filters: 
+script-spark-sumbit-1  | Post-Scan Filters: isnotnull(driver_review#5.text)
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO V2ScanRelationPushDown: 
+script-spark-sumbit-1  | Output: driver_review#5
+script-spark-sumbit-1  |          
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO Partitioner: Fewer documents (1696) than the calculated number of documents per partition (205128.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO Partitioner: Getting collection stats for: london.taxi_rides
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO Partitioner: Fewer documents (1675) than the calculated number of documents per partition (203821.0). Returning a single partition
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO CodeGenerator: Code generated in 7.309136 ms
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO CodeGenerator: Code generated in 13.535609 ms
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO CodeGenerator: Code generated in 21.691304 ms
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO SparkContext: Starting job: showString at <unknown>:0
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Got job 8 (showString at <unknown>:0) with 1 output partitions
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Final stage: ResultStage 8 (showString at <unknown>:0)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Parents of final stage: List()
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Missing parents: List()
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[37] at showString at <unknown>:0), which has no missing parents
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 48.1 KiB, free 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 19.7 KiB, free 434.3 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on spark-sumbit:7002 (size: 19.7 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1513
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[37] at showString at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks resource profile 0
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 8) (172.25.0.3, executor 0, partition 0, PROCESS_LOCAL, 5015 bytes) taskResourceAssignments Map()
+script-spark-sumbit-1  | 23/01/16 19:31:00 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 172.25.0.3:34035 (size: 19.7 KiB, free: 434.4 MiB)
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 8) in 190 ms on 172.25.0.3 (executor 0) (1/1)
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO DAGScheduler: ResultStage 8 (showString at <unknown>:0) finished in 0.196 s
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO TaskSchedulerImpl: Killing all running tasks in stage 8: Stage finished
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO DAGScheduler: Job 8 finished: showString at <unknown>:0, took 0.200432 s
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO CodeGenerator: Code generated in 10.904205 ms
+script-spark-sumbit-1  | +--------------------+------+
+script-spark-sumbit-1  | |         review_text|length|
+script-spark-sumbit-1  | +--------------------+------+
+script-spark-sumbit-1  | |goodgoodgoodgoodg...|    48|
+script-spark-sumbit-1  | |nicenicenicenicen...|    36|
+script-spark-sumbit-1  | |driver wasn't in ...|    27|
+script-spark-sumbit-1  | |nice car. I like ...|    22|
+script-spark-sumbit-1  | |good music in the...|    21|
+script-spark-sumbit-1  | |  driver was in time|    18|
+script-spark-sumbit-1  | |       polite driver|    13|
+script-spark-sumbit-1  | |        super driver|    12|
+script-spark-sumbit-1  | |          it was bad|    10|
+script-spark-sumbit-1  | |           it was ok|     9|
+script-spark-sumbit-1  | +--------------------+------+
+script-spark-sumbit-1  | 
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO SparkUI: Stopped Spark web UI at http://spark-sumbit:4040
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO StandaloneSchedulerBackend: Shutting down all executors
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO MemoryStore: MemoryStore cleared
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO BlockManager: BlockManager stopped
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO BlockManagerMaster: BlockManagerMaster stopped
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+script-spark-sumbit-1  | 23/01/16 19:31:01 INFO SparkContext: Successfully stopped SparkContext
+script-spark-sumbit-1  | 23/01/16 19:31:05 INFO ShutdownHookManager: Shutdown hook called
+script-spark-sumbit-1  | 23/01/16 19:31:05 INFO ShutdownHookManager: Deleting directory /tmp/spark-3176c062-4b32-4930-a45b-4ee122d39fa8
+script-spark-sumbit-1  | 23/01/16 19:31:05 INFO ShutdownHookManager: Deleting directory /tmp/spark-571f8a90-f6ee-4d4e-975f-d15ac0c58343
+script-spark-sumbit-1  | 23/01/16 19:31:05 INFO ShutdownHookManager: Deleting directory /tmp/spark-571f8a90-f6ee-4d4e-975f-d15ac0c58343/pyspark-f74f0161-3a7d-4957-ba45-a7b63998df22
+script-spark-sumbit-1 exited with code 0
+m.pinchuk@uaiev8545nbl:~/Documents/new/hl/spark/script$ 
+
